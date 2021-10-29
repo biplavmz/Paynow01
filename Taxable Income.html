@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="simple.css">
+    <title>Paynow</title>
+    <link rel="shortcut icon" href="thunder.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+                
+        <a class="brand" style="color: gold;" href="http://127.0.0.1:5500/index.html"><i><img height="30px" src="thunder.png" alt="logo"></i>Paynow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/simpleintrest.html">Simple Interest</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link"  href="http://127.0.0.1:5500/compound.html">Compound Interest</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"  href="http://127.0.0.1:5500/Taxable%20Income.html">Taxable Income Calculator                      </a>
+              </li>
+          </ul>
+          
+        </div>
+      </nav>
+
+      <hr>
+
+<div>
+      <h1 class="text mt-5">Taxable Income Calculator</h1>
+    </div>
+
+    
+
+
+
+<div class="contanier mt-5">
+    <div class="row">
+        <div class="col-md-8 bg-dark shadow mx-auto card" >
+
+            <h4 class="text-light mt-5">Taxable Income</h4>
+<div class="si mt-5">
+    <span class="text-light pri mt-5">Gross Total Income</span>
+    <div class="text-light in">₹ <input type="text" placeholder="Amount" id="amt">
+    </div>
+<div class="si mt-5">
+    <span class="text-light pri mt-5">Deductions</span>
+    <div class="text-light in">₹ <input type="text" placeholder="Amount" id="dec">
+    </div>
+
+
+
+        </div>
+    </div>
+<div>
+    <button onclick="m1()" type="button" class="btn btn-primary mt-5" style="width: 200px;">Submit</button>
+</div>
+
+<div class="mt-4">
+    <h4 class="text-white" id="lk"></h4>
+    
+</div>
+</div>
+
+
+
+    </div>
+
+
+<div class="container  mt-5 text-white">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>What is the Income Tax Calculator?</h1>
+            <p class="mt-4 ms-5">
+
+                An Income-tax calculator is an online tool that helps to evaluate taxes based on a person’s income once the Union Budget for the year is announced. Individuals falling under the taxable income bracket are liable to pay a specific portion of their net annual income as tax. Income tax can be paid either as tax deducted at source while disbursement of monthly salary, or through the income tax returns portal managed by the Central Board of Direct Taxes (CBDT). The provision for online payment of taxes is to ensure individuals pay their stipulated dues on any earnings generated from other sources.
+
+The IT calculator given on this page is aligned with the updates announced in the Union Budget 2021-22.
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+    function m1(){
+   var amount = document.getElementById("amt").value;
+   var dec = document.getElementById("dec").value;
+
+   var ans  =  amount-dec;
+
+   if (amount == ""||dec=="") {
+    alert("Need some value");
+    return false;
+   }else{
+
+   document.getElementById("lk").innerHTML =  "Simple Interest = " +"₹"+ans;
+    }
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

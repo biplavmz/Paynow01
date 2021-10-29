@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="landing.css">
+    <title>Paynow</title>
+    <link rel="shortcut icon" href="thunder.png" type="image/x-icon">
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="Promises.js"></script> -->
+
+
+  </head>
+  <body>
+
+    <section class="landing">
+
+          <div class="container">
+
+            <!-- navbar -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                
+                <a class="brand" style="color: gold;" href="http://127.0.0.1:5500/index.html"><i><img height="30px" src="thunder.png" alt="logo"></i>Paynow</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://127.0.0.1:5500/simpleintrest.html">Simple Interest</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                      <a class="nav-link"  href="http://127.0.0.1:5500/compound.html">Compound Interest</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"  href="http://127.0.0.1:5500/Taxable%20Income.html">Taxable Income Calculator                      </a>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </nav>
+
+              <hr>
+
+
+       
+
+
+
+        <!-- text -->
+
+        
+            <div class="row">
+
+                <!-- text align -->
+                <div class="col-sm-6  small" >
+                  <div class="discount">
+                    <a class="hexa" style="color: white;"><i><img class="hex" src="hexagon.png"></i> 30% </a><span style="color: rgb(143, 138, 138);"> DISCOUNT FOR</span> <span style="color: white;"> 3 MONTH</span> <span style="color: rgb(143, 138, 138);">ACCOUNT</span>
+                  </div>
+                    <h1 class="txt">Instant, Faster & Secured Plumber Payment System</h1>
+                
+                    <button type="button" class="btn btn-warning text-white" id="rzp-button1">Pay Now</button>
+                    <!-- <a href="#" class="m-3" style="color: rgb(143, 138, 138);"> See more -></a> -->
+
+                </div>
+
+                <!-- images -->
+                <div class="col-sm-6 hand">
+                    <img  class="imgs" src="29_Hand with phone_01.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- <button id="rzp-button1">Pay</button> -->
+    <!-- <script>
+    var options = { 
+      "key": "rzp_test_3ZmIlR28CjKCD4", // Enter the Key ID generated from the Dashboard
+      "amount": "500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "currency": "INR",
+      "name": "Acme Corp",
+      "description": "Test Transaction",
+      "image": "https://example.com/your_logo",
+      "order_id": "order_Hds1L0zpEbkn4Q", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+      "prefill": {
+          "name": "Gaurav Kumar",
+          "email": "gaurav.kumar@example.com",
+          "contact": "9999999999"
+      },
+      "notes": {
+          "address": "Razorpay Corporate Office"
+      },
+      "theme": {
+          "color": "#3399cc"
+      }
+  };
+
+  var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+  </script> -->
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>var options = {    "key": "rzp_test_3ZmIlR28CjKCD4", // Enter the Key ID generated from the Dashboard   
+   "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise   
+   "currency": "INR",    "name": "Acme Corp",    "description": "Test Transaction",    "image": "https://example.com/your_logo",    "order_id": "order_Hds1L0zpEbkn4Q", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1  
+    "handler": function (response){        alert(response.razorpay_payment_id);        alert(response.razorpay_order_id);        alert(response.razorpay_signature)    },    "prefill": {        "name": "Gaurav Kumar",        "email": "gaurav.kumar@example.com",        "contact": "9999999999"    },    "notes": {        "address": "Razorpay Corporate Office"    },    "theme": {        "color": "#3399cc"    }};var rzp1 = new Razorpay(options);rzp1.on('payment.failed', function (response){        alert(response.error.code);        alert(response.error.description);        alert(response.error.source);        alert(response.error.step);        alert(response.error.reason);        alert(response.error.metadata.order_id);        alert(response.error.metadata.payment_id);});document.getElementById('rzp-button1').onclick = function(e){    rzp1.open();    e.preventDefault();}</script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+.brand{
+     font-size: 30px; 
+    margin-right: 100px; 
+    text-decoration: none;
+}
+
+.small{
+    margin-top: 40px;
+}
+.nav-link{
+    color: rgb(221, 220, 218);
+     font-size: 20px;
+      margin-right: 40px;
+}
+
+.hex{
+    height: 40px; transform: rotate(90deg);
+}
+
+.imgs{
+    height: 450px;
+}
+
+.txt{
+    color: white;font-size: 60px; margin: 50px 0px 40px 0px;
+}
+.landing{
+    height: 100vh;
+    background-color: rgb(44, 41, 41);
+}
+.navbar{
+    height: 110px;
+}
+
+hr{
+   background-color: rgb(71, 67, 67);
+}
+body{
+    text-decoration: none;
+    background-color: rgb(44, 41, 41);
+}
+a:link{
+    text-decoration: none;
+}
+
+@media (max-width:1200px){
+    /* .brand{
+      margin-right: 20px;   
+    } */
+
+    .imgs{
+        height: 400px;
+    }
+
+    .txt{
+        color: white;
+        font-size: 45px;
+         margin: 50px 0px 40px 0px;
+    }
+}
+
+
+
+
+
+
+@media (max-width:992px){
+    .navbar-nav{
+        text-align:center;
+        /* background-color: rgb(230, 42, 42); */
+        display: block;
+        font-size: 40px;
+        overflow: hidden;
+    }
+
+    .nav-link{
+        font-size: 17px;
+        padding: 0.5px 1rem;
+        margin-right:30px
+
+    }
+
+    .imgs{
+        height: 350px;
+    }
+
+    .txt{
+        color: white;
+        font-size: 30px;
+         margin: 50px 0px 40px 0px;
+    }
+}
+
+
+
+@media (max-width:770px){
+    .imgs{
+        height: 280px;
+    }
+
+    .txt{
+        color: white;
+        font-size: 30px;
+         margin: 50px 0px 40px 0px;
+    }
+    .hex{
+        height: 20px; transform: rotate(90deg);
+    }
+    .small, small{
+        font-size: 72%;
+    }
+    /* .hand{
+        order: 0;
+    }
+    .small{
+        order: 1;
+    } */
+}
+
+
+
+@media (max-width:576px){
+
+    .hand{
+        order: 0;
+    }
+    .small{
+        order: 1;
+    }
+
+    .brand{
+        font-size:21px
+    }
+
+
+
+
+    .imgs {
+        height: 262px;
+        display: flex;
+        float: right;
+    }
+
+    .txt {
+        color: white;
+        font-size: 33px;
+        margin: 50px 0px 40px 0px;
+    }
+
+   
+    .small {
+        margin-top: 11px;
+    }
+}
+
+@media (max-width:450px){
+
+.txt {
+    color: white;
+    font-size: 22px;
+    margin: 24px 0px 40px 0px;
+}
+.imgs {
+    height: 172px;
+    display: flex;
+    float: right;
+}
+}
+

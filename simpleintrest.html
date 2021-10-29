@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="simple.css">
+    <title>Paynow</title>
+    <link rel="shortcut icon" href="thunder.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+                
+        <a class="brand" style="color: gold;" href="http://127.0.0.1:5500/index.html"><i><img height="30px" src="thunder.png" alt="logo"></i>Paynow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/simpleintrest.html">Simple Interest</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link"  href="http://127.0.0.1:5500/compound.html">Compound Interest</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"  href="http://127.0.0.1:5500/Taxable%20Income.html">Taxable Income Calculator                      </a>
+              </li>
+          </ul>
+          
+        </div>
+      </nav>
+
+      <hr>
+
+<div>
+      <h1 class="text mt-5">Simple Interest Calculator</h1>
+    </div>
+
+    
+
+
+
+<div class="contanier mt-5">
+    <div class="row">
+        <div class="col-md-8 bg-dark shadow mx-auto card" >
+
+            <h4 class="text-light mt-5">Simple Interest</h4>
+<div class="si mt-5">
+    <span class="text-light pri mt-5">Principal Amount</span>
+    <div class="text-light in">₹ <input type="text" placeholder="Amount" id="amt">
+    </div>
+<div class="si mt-5">
+    <span class="text-light rate mt-5">Rate of Interest (P.A)</span>
+    <div>
+   <input type="text" placeholder="Rate" id="rates">
+   <span class="text-light in"> %
+</span>
+</div>
+<div class="si mt-5">
+    <span class="text-light pri mt-5">Time Period</span>
+    <div>
+    <input type="text" placeholder="Time" id="time">
+    <span class="text-light in">Yr
+</span>
+</div>
+
+</div>
+
+        </div>
+    </div>
+<div>
+    <button onclick="m1()" type="button" class="btn btn-primary mt-5" style="width: 200px;">Submit</button>
+</div>
+
+<div class="mt-4">
+    <h4 class="text-white" id="lk"></h4>
+    
+</div>
+</div>
+
+
+
+    </div>
+
+
+<div class="container  mt-5 text-white">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Simple Interest Calculator – Calculate Simple Interest Online</h1>
+            <p class="mt-4 ms-5">
+                Investments earned on a scheme are calculated as gains accumulated against the interest accumulated. Such gains are compiled in either compound or simple interest. Interest is calculated on the principal amount.
+
+Calculating the amount that you will gain after a certain period based on the interest is vital. If your investment accumulates funds based on the simple interest you can use a simple interest calculator. These calculators help you easily compute the total amount of funds you will be able to generate on maturity.
+            </p>
+        </div>
+
+<div>
+    <h1>
+        Advantages of using Simple Interest Calculators
+    </h1>
+
+    <p class="mt-5">
+        There are times when borrowers, depending on the manual method, people pay unpaid interest before principal. This situation leads to issues during computing simple interest on an amount. Following are some of the advantages of switching to an online calculator from the manual method.
+    </p>
+    <ul>
+        <li class="mt-5">SI is computed irrespective of any unit. Be it dollar, euro or any other currency, it calculates effectively.</li>
+        <li class="mt-3">Users who intend to save time on calculating interest rates with changing years can save their time with its judicious use.</li>
+        <li class="mt-3">Numerous variables are available to help you gauge your total investment. So, knowing about the total return and maturity time helps you to take viable decisions.
+        </li>
+        <li class="mt-3">A simple interest loan calculator helps in determining the current value of money.
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+    function m1(){
+   var amount = document.getElementById("amt").value;
+   var rate = document.getElementById("rates").value;
+   var time = document.getElementById("time").value;
+
+   
+
+   var simplerate = amount*rate*time;
+   var ans = simplerate/100;
+
+   if (amount == ""||rate==""||time=="") {
+    alert("Need some value");
+    return false;
+   }else{
+
+   document.getElementById("lk").innerHTML =  "Simple Interest = " +"₹"+ans;
+    }
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

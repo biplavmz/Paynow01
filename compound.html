@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="simple.css">
+    <title>Paynow</title>
+    <link rel="shortcut icon" href="thunder.png" type="image/x-icon">
+
+    
+</head>
+<body>
+
+    <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+                
+        <a class="brand" style="color: gold;" href="http://127.0.0.1:5500/index.html"><i><img height="30px" src="thunder.png" alt="logo"></i>Paynow</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:5500/simpleintrest.html">Simple Interest</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link"  href="http://127.0.0.1:5500/compound.html">Compound Interest</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"  href="http://127.0.0.1:5500/Taxable%20Income.html">Taxable Income Calculator                      </a>
+              </li>
+          </ul>
+          
+        </div>
+      </nav>
+
+      <hr>
+
+<div>
+      <h1 class="text mt-5">Compound Interest Calculator</h1>
+    </div>
+
+    
+
+
+
+<div class="contanier mt-5">
+    <div class="row">
+        <div class="col-md-8 bg-dark shadow mx-auto card" >
+
+            <h4 class="text-light mt-5">Compound Interest</h4>
+<div class="si mt-5">
+    <span class="text-light pri mt-5">Principal Amount</span>
+    <div class="text-light in">₹ <input type="text" placeholder="Amount" id="amt">
+    </div>
+<div class="si mt-5">
+    <span class="text-light rate mt-5">Rate of Interest (P.A)</span>
+    <div>
+   <input type="text" placeholder="Rate" id="rates">
+   <span class="text-light in"> %
+</span>
+</div>
+<div class="si mt-5">
+    <span class="text-light pri mt-5">Time Period</span>
+    <div>
+    <input type="text" placeholder="Time" id="time">
+    <span class="text-light in">Yr
+</span>
+</div>
+
+</div>
+
+        </div>
+    </div>
+<div>
+    <button onclick="m2()" type="button" class="btn btn-primary mt-5" style="width: 200px;">Submit</button>
+</div>
+
+<div class="mt-4">
+    <h4 class="text-white" id="lk"></h4>
+    
+</div>
+</div>
+
+
+
+    </div>
+
+
+<div class="container  mt-5 text-white">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Compound Interest Calculator – Calculate Compound Interest Online            </h1>
+            <p class="mt-4 ms-5">
+                Compounding interest, as opposed to simple interest, is the situation where your wealth increases exponentially because you earn interest on your total investments, the aggregation of your principal amount and the interest it incurs. Mathematically, the possibilities of compound interest are endless. Most of the modern business thrives on it. One needs a reliable compound interest calculator to ensure they are receiving the right ROI
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+    function m2(){
+   var principle = document.getElementById("amt").value;
+   var rate = document.getElementById("rates").value;
+   var time = document.getElementById("time").value;
+
+   var amt = (1+rate/100);
+
+   var rt = Math.pow(amt,time);
+
+   var Amounts = principle*rt; 
+
+   var ci = Amounts-principle;
+
+
+
+   if (principle == ""||rate==""||time=="") {
+    alert("Need some value");
+    return false;
+   }else{
+
+   document.getElementById("lk").innerHTML =  "Compound Interest  = " +"₹"+ Math.round(ci);
+    }
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
